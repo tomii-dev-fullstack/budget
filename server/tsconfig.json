@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "target": "es2020",           // Mejor que ES6 para soporte más moderno
+    "outDir": "./dist",
+    "rootDir": "./src",           // Mejor que "./" para evitar compilar archivos fuera de src
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true          // Evita chequeos pesados en tipos de librerías
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
+}
