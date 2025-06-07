@@ -1,8 +1,11 @@
 import type { ProposalData } from "../types/proposal";
+const API_LOCAL = 'http://localhost:3001';
+const API_PROD = 'https://proposal-three-eta.vercel.app/api';
+
 
 const generateFile = async (endpoint: string, proposalToSend: ProposalData): Promise<void> => {
     try {
-        const response = await fetch(`http://localhost:3001/${endpoint}`, {
+        const response = await fetch(`${API_PROD}/${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(proposalToSend),
